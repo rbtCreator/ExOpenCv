@@ -1,7 +1,3 @@
-/*#include <opencv2/core/core.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
-#include <opencv2/highgui/highgui.hpp>
-*/
 #include "opencv2/opencv.hpp"
 #include <string>
 #include <iostream>
@@ -54,7 +50,9 @@ int main(int argc, char *argv[])
         if( key == 'd')
         {
             std::string str = mainStr;
-            str.append(std::to_sting counter);
+            std::stringstream ss;
+            ss << counter;
+            str.append(ss.str()) ;
             str.append(".jpg");
             counter++;
             cv::imwrite(str, frame);
