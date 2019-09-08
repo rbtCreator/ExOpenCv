@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1567935607 source:/home/daniil/ExOpenCv/capter5/ex5/main.cpp
+	"opencv2/opencv.hpp"
+	<string>
+	<iostream>
+
