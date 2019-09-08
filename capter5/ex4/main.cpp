@@ -9,10 +9,11 @@ int main(int argc, char *argv[])
     cv::namedWindow(window, cv::WINDOW_AUTOSIZE);
     cv::imshow(window, img);
     cv::waitKey(0);
+    cv::Mat img_roi;
     for(int i = 210; i > 0; i -= 10)
     {
         cv::Rect ROI = cv::Rect(0, 0, i, i);
-        cv::Mat img_roi = img(ROI);
+        img_roi = img(ROI);
         img_roi.setTo(cv::Scalar(i));
     }
     cv::imshow(window, img);
