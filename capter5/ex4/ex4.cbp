@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="ex3" />
+		<Option title="ex4" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Release">
-				<Option output="bin/Release/ex3" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/ex4" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -18,11 +18,10 @@
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="-s" />
-			<Add option="`pkg-config --cfalg opencv`" />
+			<Add option="`opencv-config --cxxflags`" />
 		</Compiler>
 		<Linker>
-			<Add option="`pkg-config --libs opencv`" />
+			<Add option="`opencv-config --ldstaticflags`" />
 		</Linker>
 		<Unit filename="arnold_schwarzenegger.jpg" />
 		<Unit filename="main.cpp" />
